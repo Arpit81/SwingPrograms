@@ -20,7 +20,8 @@ public class MemuDemoSwing {
 		frame.setLocationRelativeTo(null);
 		frame.setTitle("Menu");
 		
-		
+		JDesktopPane dp=new JDesktopPane();
+		frame.add(dp);
 		
 		JMenuBar mb= new JMenuBar();
 		frame.add(mb,BorderLayout.NORTH);
@@ -34,7 +35,10 @@ public class MemuDemoSwing {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						System.out.println("New");
+						
+						New n=new New();
+				      dp.add(n);
+			     	n.setVisible(true);
 						
 					}
 			
@@ -47,7 +51,9 @@ public class MemuDemoSwing {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						System.out.println("New Window");
+					NewWindow nw=new NewWindow();
+					dp.add(nw);
+					nw.setVisible(true);
 						
 					}
 			
@@ -333,6 +339,16 @@ public class MemuDemoSwing {
 		  
 
 			  JMenuItem ml1=new JMenuItem("Zoom");
+			  ml1.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+ 					View v=new View();
+	  			   dp.add(v);
+			      	v.setVisible(true);
+		 			
+				}
+			});
 			  JMenuItem ml2=new JMenuItem("Status Bar");
 			  
 			  m4.add(ml1);
