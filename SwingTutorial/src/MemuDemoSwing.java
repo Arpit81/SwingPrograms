@@ -25,6 +25,7 @@ public class MemuDemoSwing {
 		
 		JMenuBar mb= new JMenuBar();
 		frame.add(mb,BorderLayout.NORTH);
+		
 		JMenu m1=new JMenu("File");
 		mb.add(m1);
 		
